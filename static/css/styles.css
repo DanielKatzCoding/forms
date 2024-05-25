@@ -34,14 +34,19 @@ ul li a {
     height: 100%; /* Ensure anchor tag fills entire li height */
      /* Match li's rounded corners */
     box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+    font-size: 20px;
+    transition: font-size 0.3s ease;
 }
 
+ul li a:hover {
+    font-size: 25px;
+}
 
 .container {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 100vh; /* Ensure full height of viewport */
+    height: 100%; /* Ensure full height of viewport */
 }
 
 .navigation {
@@ -49,15 +54,30 @@ ul li a {
     top: 0;
     right: 0;
     background-color: #212121;
-    width: 200px; /* Adjust width as needed */
+    width: 15%; /* Adjust width as needed */
     height: 100%; /* Full height of viewport */
     overflow-y: auto; /* Enable scrolling if content exceeds height */
     text-align: center;
 }
 
+.page-content {
+    margin: 0 auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
 .main-content {
-    flex: 1;
-    padding: 20px;
+    position: fixed;
+    width: 85%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+
 }
 
 @font-face {

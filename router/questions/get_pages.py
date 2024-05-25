@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Request
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
+from fastapi.responses import HTMLResponse
 
 router = APIRouter()
 
@@ -21,3 +22,8 @@ def add_routes(directory):
 
 # Add routes for all templates in the "templates" directory
 add_routes("templates")
+
+
+@router.get("/", response_class=HTMLResponse)
+async def read_item(request: Request):
+    return templates.TemplateResponse("dynamics.html", {"request": request})

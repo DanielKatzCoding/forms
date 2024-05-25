@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body dir="rtl">
+    <div class="container">
+        <div class="navigation">
+            <h1>עמודים</h1>
+            <nav>
+                <ul>
+                    <li><a href="#פרטים אישיים">פרטים אישיים</a></li>
+                    <li><a href="/page2">Page 2</a></li>
+                    <li><a href="/page3">Page 3</a></li>
+                    <!-- Add more links as needed -->
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="title">
+                <h1>שאלון דינאמיקה</h1>
+            </div>
+            <div class="page-content">
+                <form id="form_id" action="/submit_form" method="post">
+                    <div class="selection_form">
+                        <h1 id="פרטים אישיים">שאלון דינאמיקה</h1>
+                        <label>Input 1:</label>
+                        <input class="styled-input" name="input1" type="text" placeholder="my_input">
+                        <label>Input 2:</label>
+                        <input class="styled-input" name="input2" type="text" placeholder="my_input">
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="font-size:14px">Made by Daniel Katz | GitHub name - DanielKatzCoding</p>
+    </footer>
+</body>
+</html>

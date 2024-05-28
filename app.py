@@ -1,4 +1,4 @@
-from router.questions.get_pages import router as dynamic_pages_router
+from utils.get_pages import router as dynamic_pages_router
 from router.dump_form_data import router as dump_form_router
 from fastapi import FastAPI, Request, Form
 import uvicorn

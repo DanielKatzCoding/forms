@@ -1,7 +1,6 @@
-[
-    {
-        "input1": "ghjgh",
-        "input2": "dffhdfg",
-        "input3": "fjgfgj"
+{
+    "פרטים אישיים": {
+        "aa": "asdf",
+        "input2": "fdsa"
     }
-]
+}

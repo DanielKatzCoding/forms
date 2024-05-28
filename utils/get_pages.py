@@ -26,4 +26,4 @@ add_routes("templates")
 
 @router.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
-    return templates.TemplateResponse("dynamics.html", {"request": request})
+    return templates.TemplateResponse("base.html", {"request": request})

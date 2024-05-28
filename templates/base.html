@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Website{% endblock %}</title>
+    <title>שאלון-לי</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/handle_request.js"></script>
 </head>
 <body>
     <div class="container">
@@ -21,11 +22,11 @@
         </div>
         <div class="main-content">
             <div class="title">
-                {% block title %}
+                {% block title1 %}
                 {% endblock %}
             </div>
             <div class="page-content">
-                {% block content %}
+                {% block content1 %}
                 {% endblock %}
             </div>
         </div>
@@ -33,6 +34,5 @@
     <footer>
         <p style="font-size:14px">Made by Daniel Katz | GitHub name - DanielKatzCoding</p>
     </footer>
-    <script src="/static/js/scripts.js"></script>
 </body>
 </html>

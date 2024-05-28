@@ -1,13 +1,19 @@
 from fastapi import APIRouter, Form, Request
+from static.pydentic_models.pydentic import FormData
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import json
 
 router = APIRouter()
-templates = Jinja2Templates(directory="templates")
 
-# List to store quiz data
-form_data_list = []
+
+@router.post("/submit")
+async def submit(data: FormData):
+    # Process the form data here
+    print(f"Received data: {data.__root__}")
+
+    # Return a JSON response
+    return {"message": "Form submitted successfully!", "data": data.__root__}
 
 
 @router.post("/submit_form", response_class=HTMLResponse)

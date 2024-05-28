@@ -23,8 +23,13 @@ async function submitForm() {
             body: JSON.stringify(wrapper),
         });
 
-        const result = await response.json();
-        document.getElementById('response').innerText = JSON.stringify(result);
+        if (response.redirected) {
+            // Perform the redirection on the client side
+            window.location.href = response.url;
+        } else {
+            const result = await response.json();
+            document.getElementById('response').innerText = JSON.stringify(result);
+        }
     } catch (error) {
         console.error('Error submitting form:', error);
         document.getElementById('response').innerText = 'An error occurred.';

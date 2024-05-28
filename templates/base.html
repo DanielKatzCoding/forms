@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <h1>עמודים</h1>
+            <nav>
+                <ul>
+                    <li><a href="/page1">פרטים אישיים</a></li>
+                    <li><a href="/page2">Page 2</a></li>
+                    <li><a href="/page3">Page 3</a></li>
+                    <!-- Add more links as needed -->
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="title">
+                {% block title %}
+                {% endblock %}
+            </div>
+            <div class="page-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="font-size:14px">Made by Daniel Katz | GitHub name - DanielKatzCoding</p>
+    </footer>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

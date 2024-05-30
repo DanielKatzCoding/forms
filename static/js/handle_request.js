@@ -10,9 +10,9 @@ async function submitForm() {
     });
 
     const wrapper = {};
-    wrapper[document.getElementById('section_id').textContent] = data;
+    data["title"] = document.getElementById('section_id').textContent;
     const path = window.location.pathname;
-    wrapper['page_name'] = path.split('/').pop();
+    wrapper[path.split('/').pop()] = data;
 
     try {
         const response = await fetch('/submit', {

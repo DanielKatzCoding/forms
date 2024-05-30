@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">פרטים tjrho</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>Input 1:</label>
+                <input class="styled-input" name="aa" type="text" placeholder="my_input">
+                <label>Input 2:</label>
+                <input class="styled-input" name="input2" type="text" placeholder="my_input">
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">Next</button>
+        </form>
+{% endblock %}

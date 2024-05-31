@@ -1,10 +1,20 @@
 {
     "dynamics": {
+        "/dynamics/page1": {
+            "aa": "hello",
+            "input2": "world",
+            "title": "פרטים tjrho"
+        },
         "navs": [
             "פרטים אישיים",
             "דף2",
             "דף3"
-        ]
+        ],
+        "/dynamics/page3": {
+            "aa": "sssssssssss",
+            "input2": "dddddddddddddd",
+            "title": "פרטים tjrho"
+        }
     },
     "interview": {
         "navs": []
@@ -12,9 +22,9 @@
     "interviewer survey": {
         "navs": []
     },
-    "page1": {
-        "aa": "",
-        "input2": "",
+    "/dynamics/page1": {
+        "aa": "asd",
+        "input2": "zxc",
         "title": "פרטים tjrho"
     }
 }

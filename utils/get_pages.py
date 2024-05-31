@@ -24,7 +24,11 @@ def add_routes(directory, prefix):
             tmp_data.update(json.load(f)[prefix.lstrip('/')])
 
         async def route_func(request: Request):
-            return templates.TemplateResponse(route_path + ".html", {"request": request, "data": tmp_data,"zip": zip})
+            return templates.TemplateResponse(route_path + ".html", {
+                "request": request,
+                "data": tmp_data,
+                "zip": zip
+            })
 
         router.add_api_route(route_path, route_func, methods=["GET"])
 

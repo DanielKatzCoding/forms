@@ -12,7 +12,7 @@ async function submitForm() {
     const wrapper = {};
     data["title"] = document.getElementById('section_id').textContent;
     const path = window.location.pathname;
-    wrapper[path.split('/').pop()] = data;
+    wrapper[path] = data;
 
     try {
         const response = await fetch('/submit', {

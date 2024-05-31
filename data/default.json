@@ -1,0 +1,11 @@
+{
+    "dynamics": {
+      "navs": ["פרטים אישיים"]
+    },
+    "interview": {
+      "navs": []
+    },
+    "interviewer survey": {
+      "navs": []
+    }
+}

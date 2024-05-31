@@ -12,16 +12,19 @@ templates = Jinja2Templates(directory="templates")
 
 def add_routes(directory, prefix):
     templates_path = Path(directory)
-    for template_file in templates_path.glob("*.html"):
+    lst_pages = [page for page in templates_path.glob("*.html")]
+    dict_pages = {"pages": [f"{prefix}/{page.name.rsplit('.')[0]}" for page in lst_pages]}
+    print(dict_pages)
+    for template_file in lst_pages:
         route_path = f"{prefix}/{template_file.stem}"
-        print(template_file.name)
+        print(route_path)
+        tmp_data = dict_pages.copy()
 
         with open("data/data.json", 'r') as f:
-            data = json.load(f)
-            data["quest"] = prefix
-            print(data)
-        async def route_func(request: Request, template_name=template_file.name):
-            return templates.TemplateResponse(f"{prefix}/{template_name}", {"request": request, "data": data})
+            tmp_data.update(json.load(f))
+
+        async def route_func(request: Request):
+            return templates.TemplateResponse(route_path + ".html", {"request": request, "data": tmp_data})
 
         router.add_api_route(route_path, route_func, methods=["GET"])
 

@@ -9,12 +9,12 @@
     <form id="form_id" action="/submit" method="post">
             <div class="selection_form">
                 <label>תאריך</label>
-                <input class="styled-input" name="תאריך" type="date" value="">
+                <input class="styled-input" name="תאריך" type="date" placeholder="dd-mm-yyyy" value="{{ form_data['תאריך'] }}">
                 <label>שם המועמד:</label>
-                <input class="styled-input" name="שם המועמד" type="text" placeholder="שם המועמד" value="">
+                <input class="styled-input" name="שם המועמד" type="text" placeholder="שם המועמד" value="{{ form_data['שם המועמד'] }}">
                 <label>שם המעריך:</label>
-                <input class="styled-input" name="שם המעריך" type="text" placeholder="שם המעריך" value="">
+                <input class="styled-input" name="שם המעריך" type="text" placeholder="שם המעריך" value="{{ form_data['שם המעריך'] }}">
             </div>
-            <button type="button" class="btn" onclick="submitForm()">Next</button>
+            <button type="button" class="btn" onclick="submitForm()">שמור והמשך</button>
         </form>
 {% endblock %}

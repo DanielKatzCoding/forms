@@ -1,18 +1,25 @@
 {
     "dynamics": {
-        "/dynamics/page1": {
-            "aa": "hello",
-            "input2": "world",
-            "title": "פרטים tjrho"
-        },
         "navs": [
             "פרטים אישיים",
             "דף2",
             "דף3"
         ],
+        "/dynamics/page1": {
+            "תאריך": "2024-06-18",
+            "שם המועמד": "דניאל כץ",
+            "שם המעריך": "מראיין",
+            "title": "פרטים אישיים"
+        },
+        "/dynamics/page2": {
+            "חוסן": "מה זה פה\n\n\n\nלאבנתי\n\n\n\n\n\n\nברה",
+            "aa": "שלום",
+            "input2": "חבר",
+            "title": "פרטים נוספים"
+        },
         "/dynamics/page3": {
-            "aa": "sssssssssss",
-            "input2": "dddddddddddddd",
+            "aa": "מה",
+            "input2": "בעצם אומר",
             "title": "פרטים tjrho"
         }
     },
@@ -21,10 +28,5 @@
     },
     "interviewer survey": {
         "navs": []
-    },
-    "/dynamics/page1": {
-        "aa": "asd",
-        "input2": "zxc",
-        "title": "פרטים tjrho"
     }
 }

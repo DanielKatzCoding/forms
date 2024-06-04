@@ -11,10 +11,10 @@
     <form id="form_id" action="/submit" method="post">
             <div class="selection_form">
                 <label>Input 1:</label>
-                <input class="styled-input" name="aa" type="text" placeholder="my_input">
+                <input class="styled-input" name="aa" type="text" placeholder="my_input" value="{{ form_data['aa'] }}">
                 <label>Input 2:</label>
-                <input class="styled-input" name="input2" type="text" placeholder="my_input">
+                <input class="styled-input" name="input2" type="text" placeholder="my_input" value="{{ form_data['input2'] }}">
             </div>
-            <button type="button" class="btn" onclick="submitForm()">Next</button>
+            <button type="button" class="btn" onclick="submitForm()">שמור והמשך</button>
         </form>
 {% endblock %}

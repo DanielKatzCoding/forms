@@ -116,6 +116,10 @@ footer {
     font-size: 20px;
 }
 
+.custom-textarea {
+    height: 300px; /* Adjust the height as needed */
+}
+
 .styled-input::placeholder {
     color: #d1d1d1;
 }

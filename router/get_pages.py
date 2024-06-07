@@ -30,7 +30,8 @@ def add_routes(directory, prefix):
                 "request": request,
                 "data": tmp_data,
                 "form_data": load_data(template_name),
-                "zip": zip
+                "zip": zip,
+                "range": range
             }]
             return templates.TemplateResponse(*a)
 

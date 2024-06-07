@@ -3,19 +3,30 @@
 
 
 {% block title1 %}
-    <h1 id="section_id">פרטים נוספים</h1>
+    <h1 id="section_id">מדדים</h1>
 
 {% endblock %}
 
 {% block content1 %}
     <form id="form_id" action="/submit" method="post">
             <div class="selection_form">
-                <label>Input 1:</label>
-                <textarea class="styled-input custom-textarea" name="חוסן" style="resize: none;">{{ form_data['חוסן'] }}</textarea>
-                <input class="styled-input" name="aa" type="text" placeholder="my_input" value="{{ form_data['aa'] }}">
-                <label>Input 2:</label>
-                <input class="styled-input" name="input2" type="text" placeholder="my_input" value="{{ form_data['input2'] }}">
+                <label>חוסן</label>
+                <p>יכולת התמדה והתאקלמות לנוכח אתגרים, סכנות ושינויים במתארים השונים. הן פיזיים והן מנטליים, לאורך זמן.</p>
+                <p>התמודדות פעילה עם אתגרים אלו תוך הפגנת אורך רוח וענייניות</p>
+                <div class="slider-container">
+                    <input class="styled-input" name="חוסן" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['חוסן'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <label>שם המועמד:</label>
+                <input class="styled-input" name="שם המועמד" type="text" placeholder="שם המועמד" value="{{ form_data['שם המועמד'] }}">
+                <label>שם המעריך:</label>
+                <input class="styled-input" name="שם המעריך" type="text" placeholder="שם המעריך" value="{{ form_data['שם המעריך'] }}">
             </div>
-            <button type="button" class="btn" onclick="submitForm()">שמור והמשך</button>
-        </form>
+        <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+    </form>
 {% endblock %}

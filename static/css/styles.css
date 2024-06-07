@@ -44,6 +44,10 @@ ul li a:hover {
     font-size: 25px;
 }
 
+ul li a :hover {
+    font-size: 25px;
+}
+
 .container {
     display: flex;
     justify-content: flex-start;
@@ -102,6 +106,12 @@ footer {
     /* Center horizontally and add vertical margin */
 }
 
+.bigger-nav {
+    font-size: 100px;
+    padding: 50px;
+}
+
+
 .styled-input {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -118,6 +128,7 @@ footer {
 
 .custom-textarea {
     height: 300px; /* Adjust the height as needed */
+    resize: none; important!
 }
 
 .styled-input::placeholder {
@@ -148,6 +159,22 @@ footer {
 .btn:hover {
     background-color: #0056b3;
 }
+
+        .slider-container {
+            position: relative;
+
+        }
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 35px;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+
 
 @font-face {
     font-family: 'default_font';

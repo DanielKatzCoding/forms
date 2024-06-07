@@ -9,6 +9,16 @@ from static.pydentic_models.pydentic import FormData
 router = APIRouter()
 
 
+def load_data(path: str) -> dict | None:
+    with open("data/data.json", 'r') as f:
+        form_data: dict = json.load(f)
+        try:
+            form_data = form_data[path.split('/')[1]][path]
+        except KeyError:
+            return
+        return form_data
+
+
 def append_data(data: Dict[str, Union[Dict[str, str], str]], dir_: Optional[str] = None):
     with open("data/data.json", 'r') as f:
         json_data = json.load(f)

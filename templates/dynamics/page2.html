@@ -4,7 +4,6 @@
 
 {% block title1 %}
     <h1 id="section_id">מדדים</h1>
-
 {% endblock %}
 
 {% block content1 %}
@@ -22,6 +21,69 @@
                         {% endfor %}
                     </div>
                 </div>
+
+                <label>מוטיבציה לשירות ביחידה</label>
+                <p>זיקה לעולם הקרבי וליחידה בפרט, רצון לתרומה משמעותית / אידיאולוגית והגעה להישגים דרך הקרבה פיזית ומנטלית</p>
+                <div class="slider-container">
+                    <input class="styled-input" name="מוטיבציה לשירות ביחידה" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['מוטיבציה לשירות ביחידה'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>יכולות למידה גבוהות</label>
+                <p>יכולת ללמוד, לעבד, ולנתח מידע באופן עצמאי, תוך שאיפה לבקריאות ולהבנה מעמיקה של תהליכים ומערכות</p>
+                <div class="slider-container">
+                    <input class="styled-input" name="יכולות למידה גבוהות" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['יכולות למידה גבוהות'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>עבודת צוות</label>
+                <p>יכולת לעבוד בשיתוף פעולה, לסייע ולהסתייע בחברי הצוות, להניע ולרתום אחרים.</p>
+                    <p>יכולת לתקשר בעיות, בקשות ורצונות בצורה נעימה וחברית. נכונות לתרומה לקבוצה.</p>
+                <div class="slider-container">
+                    <input class="styled-input" name="מוטיבציה לשירות ביחידה" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['מוטיבציה לשירות ביחידה'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>אחריות אישית</label>
+                <p>יכולת לקחת פיקוד אישי על משימות תוך הפגנת משימתיות והקרבה אישית.</p>
+                    <p>להפגין בגרות בביצען, להודות בטעויות ולהראות פתיחות ללמידה ולביקרות תוך כנות ותום לב.</p>
+                <div class="slider-container">
+                    <input class="styled-input" name="אחריות אישית" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['אחריות אישית'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>גמישות תפקודית</label>
+                <p>יכולת להתאקלם במהירות לסביבה חדשה. הן ברמה המקצועית והן ברמה הפיזית. להתאים את הביצוע בהתאם לדרישות המשימה.</p>
+                <div class="slider-container">
+                    <input class="styled-input" name="גמישות תפקודית" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['גמישות תפקודית'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
                 <label>שם המועמד:</label>
                 <input class="styled-input" name="שם המועמד" type="text" placeholder="שם המועמד" value="{{ form_data['שם המועמד'] }}">
                 <label>שם המעריך:</label>

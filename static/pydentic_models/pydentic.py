@@ -4,4 +4,4 @@ from pydantic import BaseModel
 
 
 class FormData(BaseModel):
-    __form_data__: Dict[str, Union[Dict[str, str], str]]
+    __root__: Dict[str, Union[Dict[str, str], str]]

@@ -34,11 +34,11 @@ def append_data(data: Dict[str, Union[Dict[str, str], str]], dir_: Optional[str]
 @router.post("/submit")
 async def submit(data: FormData):
     # Process the form data here
-    print(f"Received data: {data.__form_data__}")
-    page_name = next(iter(data.__form_data__.keys()))
+    print(f"Received data: {data.__root__}")
+    page_name = next(iter(data.__root__.keys()))
     print(page_name)
     dir_, page = page_name.lstrip('/').split('/')
-    append_data(data.__form_data__, dir_)
+    append_data(data.__root__, dir_)
 
     return RedirectResponse(url=f"/{dir_+'/page'+str(int(page[4:])+1)}", status_code=303)
 

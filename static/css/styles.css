@@ -44,6 +44,10 @@ ul li a:hover {
     font-size: 25px;
 }
 
+ul li a :hover {
+    font-size: 25px;
+}
+
 .container {
     display: flex;
     justify-content: flex-start;
@@ -101,6 +105,12 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Center horizontally and add vertical margin */
 }
+
+.bigger-nav {
+    font-size: 100px;
+    padding: 50px;
+}
+
 
 .styled-input {
     width: 100%;

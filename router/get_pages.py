@@ -1,9 +1,11 @@
 import json
 from pathlib import Path
+
 from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
+from utils.form_handle import load_data
 
 router = APIRouter()
 
@@ -11,21 +13,8 @@ router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
 
-def load_data(path: str) -> dict | None:
-    with open("data/data.json", 'r') as f:
-        form_data = json.load(f)
-        try:
-            form_data = form_data[path.split('/')[1]][path]
-        except:
-            return
-        return form_data
-
-
 def add_routes(directory, prefix):
     templates_path = Path(directory)
-    # lst_pages = [page for page in templates_path.glob("*.html")]
-    # dict_pages = {"pages": [f"{prefix}/{page.name.rsplit('.')[0]}" for page in lst_pages]}
-    #
     lst_pages = sorted([t_path for t_path in templates_path.glob("*.html")])
     dict_pages = {"pages": [f"{prefix}/{page.name.rsplit('.')[0]}" for page in lst_pages]}
 

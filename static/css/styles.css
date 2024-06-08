@@ -127,7 +127,13 @@ footer {
 
 .custom-textarea {
     height: 300px; /* Adjust the height as needed */
+    width: 600px;
+    padding: 10px;
     resize: none; important!
+}
+
+textarea {
+    font-family: Arial; important!
 }
 
 .styled-input::placeholder {
@@ -159,20 +165,20 @@ footer {
     background-color: #0056b3;
 }
 
-        .slider-container {
-            position: relative;
-
-        }
-        .slider-labels {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            width: 100%;
-            top: 35px;
-        }
-        input[type="range"] {
-            width: 100%;
-        }
+.slider-container {
+    position: relative;
+    min-width: 700px;
+}
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 35px;
+}
+input[type="range"] {
+    width: 100%;
+}
 
 
 @font-face {

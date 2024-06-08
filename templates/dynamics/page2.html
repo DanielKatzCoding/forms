@@ -3,7 +3,7 @@
 
 
 {% block title1 %}
-    <h1 id="section_id">מדדים</h1>
+    <h1 id="section_id">מדדים א'</h1>
 {% endblock %}
 
 {% block content1 %}
@@ -11,7 +11,7 @@
             <div class="selection_form">
                 <label>חוסן</label>
                 <p>יכולת התמדה והתאקלמות לנוכח אתגרים, סכנות ושינויים במתארים השונים. הן פיזיים והן מנטליים, לאורך זמן.</p>
-                <p>התמודדות פעילה עם אתגרים אלו תוך הפגנת אורך רוח וענייניות</p>
+                <p>התמודדות פעילה עם אתגרים אלו תוך הפגנת אורך רוח וענייניות.</p>
                 <div class="slider-container">
                     <input class="styled-input" name="חוסן" type="range" min="1" max="6" step="1"
                            value="{{ form_data['חוסן'] }}">
@@ -23,7 +23,7 @@
                 </div>
 
                 <label>מוטיבציה לשירות ביחידה</label>
-                <p>זיקה לעולם הקרבי וליחידה בפרט, רצון לתרומה משמעותית / אידיאולוגית והגעה להישגים דרך הקרבה פיזית ומנטלית</p>
+                <p>זיקה לעולם הקרבי וליחידה בפרט, רצון לתרומה משמעותית / אידיאולוגית והגעה להישגים דרך הקרבה פיזית ומנטלית.</p>
                 <div class="slider-container">
                     <input class="styled-input" name="מוטיבציה לשירות ביחידה" type="range" min="1" max="6" step="1"
                            value="{{ form_data['מוטיבציה לשירות ביחידה'] }}">
@@ -35,7 +35,7 @@
                 </div>
 
                 <label>יכולות למידה גבוהות</label>
-                <p>יכולת ללמוד, לעבד, ולנתח מידע באופן עצמאי, תוך שאיפה לבקריאות ולהבנה מעמיקה של תהליכים ומערכות</p>
+                <p>יכולת ללמוד, לעבד, ולנתח מידע באופן עצמאי, תוך שאיפה לבקריאות ולהבנה מעמיקה של תהליכים ומערכות.</p>
                 <div class="slider-container">
                     <input class="styled-input" name="יכולות למידה גבוהות" type="range" min="1" max="6" step="1"
                            value="{{ form_data['יכולות למידה גבוהות'] }}">
@@ -83,11 +83,6 @@
                         {% endfor %}
                     </div>
                 </div>
-
-                <label>שם המועמד:</label>
-                <input class="styled-input" name="שם המועמד" type="text" placeholder="שם המועמד" value="{{ form_data['שם המועמד'] }}">
-                <label>שם המעריך:</label>
-                <input class="styled-input" name="שם המעריך" type="text" placeholder="שם המעריך" value="{{ form_data['שם המעריך'] }}">
             </div>
         <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
     </form>

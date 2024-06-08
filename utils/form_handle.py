@@ -6,6 +6,7 @@ from fastapi.responses import RedirectResponse
 
 from static.pydentic_models.pydentic import FormData
 
+from utils.export_data import export_data as exp
 router = APIRouter()
 
 
@@ -34,11 +35,12 @@ def append_data(data: Dict[str, Union[Dict[str, str], str]], dir_: Optional[str]
 @router.post("/submit")
 async def submit(data: FormData):
     # Process the form data here
-    print(f"Received data: {data.__root__}")
+    export = data.__root__.pop("export_")
     page_name = next(iter(data.__root__.keys()))
-    print(page_name)
     dir_, page = page_name.lstrip('/').split('/')
     append_data(data.__root__, dir_)
+    if export.lower() == "true":
+        exp(dir_)
 
     return RedirectResponse(url=f"/{dir_+'/page'+str(int(page[4:])+1)}", status_code=303)
 

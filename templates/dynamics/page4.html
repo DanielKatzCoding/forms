@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">סיכום התרשמויות</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>משימת היכרות</label><br />
+                <textarea class="styled-input custom-textarea" name="משימת היכרות">{{ form_data['משימת היכרות'] }}</textarea>
+                <br />
+                <label>משימה ביצועית</label><br />
+                <textarea class="styled-input custom-textarea" name="משימה ביצועית">{{ form_data['משימת היכרות'] }}</textarea>
+                <br />
+                <label>דיון</label><br />
+                <textarea class="styled-input custom-textarea" name="דיון">{{ form_data['דיון'] }}</textarea>
+                <br />
+                <label>סיכום</label><br />
+                <textarea class="styled-input custom-textarea" name="סיכום">{{ form_data['סיכום'] }}</textarea>
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

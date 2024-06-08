@@ -132,6 +132,10 @@ footer {
     resize: none; important!
 }
 
+textarea {
+    font-family: Arial; important!
+}
+
 .styled-input::placeholder {
     color: #d1d1d1;
 }
@@ -161,20 +165,20 @@ footer {
     background-color: #0056b3;
 }
 
-        .slider-container {
-            position: relative;
-
-        }
-        .slider-labels {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            width: 100%;
-            top: 35px;
-        }
-        input[type="range"] {
-            width: 100%;
-        }
+.slider-container {
+    position: relative;
+    min-width: 700px;
+}
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 35px;
+}
+input[type="range"] {
+    width: 100%;
+}
 
 
 @font-face {

@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -14,6 +15,6 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 app.include_router(dynamic_pages_router)
 app.include_router(form_handle_router)
 
-# if __name__ == "__main__":
-#
-#     uvicorn.run.sh(app, host="localhost", port=80)
+if __name__ == "__main__":
+
+    uvicorn.run(app, host="localhost", port=8000)

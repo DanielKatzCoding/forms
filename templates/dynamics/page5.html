@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">שאלות סיכום</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+
+                <label>מידת רצון לשירות קרבי</label>
+                <div class="slider-container">
+                    <input class="styled-input" name="מידת רצון לשירות קרבי" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['מידת רצון לשירות קרבי'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>ציון בדינמיקה</label>
+                <div class="slider-container">
+                    <input class="styled-input" name="ציון בדינמיקה" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['ציון בדינמיקה'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="submitForm(true)">שמירה וסיים</button>
+        </form>
+{% endblock %}

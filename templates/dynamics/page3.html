@@ -3,17 +3,78 @@
 
 
 {% block title1 %}
-    <h1 id="section_id">פרטים tjrho</h1>
+    <h1 id="section_id">מדדים ב'</h1>
 
 {% endblock %}
 
 {% block content1 %}
     <form id="form_id" action="/submit" method="post">
             <div class="selection_form">
-                <label>Input 1:</label>
-                <input class="styled-input" name="aa" type="text" placeholder="my_input" value="{{ form_data['aa'] }}">
-                <label>Input 2:</label>
-                <input class="styled-input" name="input2" type="text" placeholder="my_input" value="{{ form_data['input2'] }}">
+                <label>זיקה טכנולוגית</label>
+                <p>נטייה להבנה של רכיבים, מערכות, תהיכים ומושגים מעולם הטכנולוגיה,</p>
+                <p>אשר מעידה על יכולת לנווט בסביבות טכנולוגיות ולהסתגל אליהן כהלכה.</p>
+                <div class="slider-container">
+                    <input class="styled-input" name="זיקה טכנולוגית" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['זיקה טכנולוגית'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>תכנון וביצוע</label>
+                <p>יכולת לתכנון ופריטת צעדים, הבנת השיקלולים לפעולה</p>
+                <p>ו/או התנהגות תוך הפעלת שיקול דעת ויכולת שיפוט, תעדוף, יסודיות וירידה לפרטים.</p>
+
+                <div class="slider-container">
+                    <input class="styled-input" name="תכנון וביצוע" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['תכנון וביצוע'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>עצמאות</label>
+                <p>יכולת לעבוד ללא צורך בהנחיה ובקרה אדוקה, תוך הפעלת שיקול דעת מותאם בפתרון בעיות.</p>
+
+                <div class="slider-container">
+                    <input class="styled-input" name="עצמאות" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['עצמאות'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>יצירתיות</label>
+                <p>חשיבה חדשנית, אסוציאטיבית, מחוץ לקופסא. מציאת פתרונות חדשים.</p>
+
+                <div class="slider-container">
+                    <input class="styled-input" name="יצירתיות" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['יצירתיות'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>סקרנות</label>
+                <p>הבעת עניין מעברים לתכנים המועברים באופן פורמלי.</p>
+
+                <div class="slider-container">
+                    <input class="styled-input" name="סקרנות" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['סקרנות'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
             <button type="button" class="btn" onclick="submitForm()">שמור והמשך</button>
         </form>

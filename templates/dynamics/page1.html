@@ -11,9 +11,11 @@
                 <label>תאריך</label>
                 <input class="styled-input" name="תאריך" type="date" placeholder="dd-mm-yyyy" value="{{ form_data['תאריך'] }}">
                 <label>שם המועמד:</label>
-                <input class="styled-input" name="שם המועמד" type="text" placeholder="שם המועמד" value="{{ form_data['שם המועמד'] }}">
+                <input class="styled-input" name="שם המועמד" type="text" pattern="[A-Za-zא-ת]+" placeholder="שם המועמד"
+                       value="{{ form_data['שם המועמד'] }}" oninput="validateInput(this)" >
                 <label>שם המעריך:</label>
-                <input class="styled-input" name="שם המעריך" type="text" placeholder="שם המעריך" value="{{ form_data['שם המעריך'] }}">
+                <input class="styled-input" name="שם המעריך" type="text" pattern="[A-Za-zא-ת]+" placeholder="שם המעריך"
+                       value="{{ form_data['שם המעריך'] }}" oninput="validateInput(this)">
             </div>
             <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
         </form>

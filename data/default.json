@@ -1,6 +1,6 @@
 {
     "dynamics": {
-      "navs": [
+        "navs": [
             "פרטים אישיים",
             "מדדים א'",
             "מדדים ב'",
@@ -9,9 +9,9 @@
         ]
     },
     "interview": {
-      "navs": []
+        "navs": []
     },
     "interviewer survey": {
-      "navs": []
+        "navs": []
     }
 }

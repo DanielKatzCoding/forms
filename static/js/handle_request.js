@@ -9,7 +9,7 @@ async function submitForm(export_ = false) {
         data[key] = value;
     });
 
-    const wrapper = {};
+    const wrapper =  {};
     data["title"] = document.getElementById('section_id').textContent;
     const path = window.location.pathname;
     wrapper[path] = data;

@@ -110,6 +110,9 @@ footer {
     padding: 50px;
 }
 
+.bigger-nav:hover {
+    font-size: 110px;
+}
 
 .styled-input {
     width: 100%;
@@ -168,13 +171,15 @@ textarea {
 .slider-container {
     position: relative;
     min-width: 700px;
+    padding-bottom: 10px;
+
 }
 .slider-labels {
     display: flex;
     justify-content: space-between;
     position: absolute;
     width: 100%;
-    top: 35px;
+    top: 30px;
 }
 input[type="range"] {
     width: 100%;

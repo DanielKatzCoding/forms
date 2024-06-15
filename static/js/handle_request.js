@@ -36,3 +36,12 @@ async function submitForm(export_ = false) {
         document.getElementById('response').innerText = 'An error occurred.';
     }
 }
+
+
+function confirmRedirectIndex() {
+    if (confirm("Are you sure? The data will be erased!")) {
+        window.location.href = "/";
+    }
+
+    return false;
+}

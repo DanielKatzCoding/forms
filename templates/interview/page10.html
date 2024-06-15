@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block title1 %}
+    <h1 id="section_id">מראיין 1</h1>
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>שם פרטי:</label>
+                <input class="styled-input" name="שם פרטי1" type="text" pattern="[A-Za-zא-ת ]+"
+                       onblur="trimInput(this)" placeholder="שם פרטי" value="{{ form_data['שם פרטי1'] }}" oninput="validateInput(this)" >
+                <label>שם משפחה:</label>
+                <input class="styled-input" name="שם משפחה1" type="text" pattern="[A-Za-zא-ת ]+"
+                       onblur="trimInput(this)" placeholder="שם משפחה" value="{{ form_data['שם משפחה1'] }}" oninput="validateInput(this)" >
+
+                <label>סיכום מראיין:</label><br />
+                <textarea class="styled-input custom-textarea" name="סיכום מראיין1">{{ form_data['סיכום מראיין1'] }}</textarea>
+                <br />
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

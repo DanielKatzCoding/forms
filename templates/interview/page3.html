@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">חברתי א</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>תנועות נוער:</label><br />
+                <textarea class="styled-input custom-textarea" name="תנועות נוער">{{ form_data['תנועות נוער'] }}</textarea>
+                <br />
+
+                <label>התנדבויות:</label><br />
+                <textarea class="styled-input custom-textarea" name="התנדבויות">{{ form_data['התנדבויות'] }}</textarea>
+                <br />
+
+                <label>מה יצא לך ליזום לאחרונה:</label><br />
+                <textarea class="styled-input custom-textarea" name="מה יצא לך ליזום לאחרונה">{{ form_data['מה יצא לך ליזום לאחרונה'] }}</textarea>
+                <br />
+
+                <label>ספר על מעגלי החברים שלך:</label><br />
+                <textarea class="styled-input custom-textarea" name="ספר על מעגלי החברים שלך">{{ form_data['ספר על מעגלי החברים שלך'] }}</textarea>
+                <br />
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

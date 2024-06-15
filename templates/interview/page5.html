@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">לימודי א</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>איזה תלמיד אתה:</label><br />
+                <textarea class="styled-input custom-textarea" name="איזה תלמיד אתה">{{ form_data['איזה תלמיד אתה'] }}</textarea>
+                <br />
+
+                <label>אילו מקצועות אתה אוהב:</label><br />
+                <textarea class="styled-input custom-textarea" name="אילו מקצועות אתה אוהב">{{ form_data['אילו מקצועות אתה אוהב'] }}</textarea>
+                <br />
+
+                <label>אילו מקצועות פחות אוהב:</label><br />
+                <textarea class="styled-input custom-textarea" name="אילו מקצועות פחות אוהב">{{ form_data['אילו מקצועות פחות אוהב'] }}</textarea>
+                <br />
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

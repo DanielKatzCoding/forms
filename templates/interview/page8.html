@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">פיזי</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>תאר את שגרת הספורט שלך:</label><br />
+                <textarea class="styled-input custom-textarea" name="תאר את שגרת הספורט שלך">{{ form_data['תאר את שגרת הספורט שלך'] }}</textarea>
+                <br />
+
+                <label>האם יצא לך להסתגל למקום חדש:</label><br />
+                <textarea class="styled-input custom-textarea" name="האם יצא לך להסתגל למקום חדש">{{ form_data['האם יצא לך להסתגל למקום חדש'] }}</textarea>
+                <br />
+
+                <label>לטייל? לישון מחוץ לבית:</label><br />
+                <textarea class="styled-input custom-textarea" name="לטייל? לישון מחוץ לבית">{{ form_data['לטייל? לישון מחוץ לבית'] }}</textarea>
+                <br />
+
+                <label>האם יש בעיות רפואיות:</label><br />
+                <textarea class="styled-input custom-textarea" name="האם יש בעיות רפואיות">{{ form_data['האם יש בעיות רפואיות'] }}</textarea>
+                <br />
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

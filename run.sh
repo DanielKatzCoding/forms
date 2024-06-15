@@ -1,2 +1,2 @@
 # !/usr/bin
-uvicorn app:app --port 8001 --host localhost --reload
+uvicorn app:app --port 8001 --host 0.0.0.0 --reload

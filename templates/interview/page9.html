@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">שירות</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>מוטיבציה - ציפיות מהשירות:</label><br />
+                <textarea class="styled-input custom-textarea" name="מוטיבציה - ציפיות מהשירות">{{ form_data['מוטיבציה - ציפיות מהשירות'] }}</textarea>
+                <br />
+
+                <label>דח"ש:</label>
+                <input class="styled-input" name="דחש" type="text" pattern="[A-Za-zא-ת ]+"
+                       onblur="trimInput(this)" placeholder="כן/לא" value="{{ form_data['דחש'] }}" oninput="validateInput(this)" >
+
+                <label>פירוט דח"ש:</label><br />
+                <textarea class="styled-input custom-textarea" name="פירוט דחש">{{ form_data['פירוט דחש'] }}</textarea>
+                <br />
+
+                <label>דירוג מוטיבציה לקרבי</label>
+                <div class="slider-container">
+                    <input class="styled-input" name="דירוג מוטיבציה לקרבי" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['דירוג מוטיבציה לקרבי'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

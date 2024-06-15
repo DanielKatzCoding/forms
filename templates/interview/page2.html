@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">מקצועות</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>פירוט ציונים</label><br />
+                <p>אנגלית, מתמטיקה, היסטוריה, לשון, אזרחות</p>
+                <textarea class="styled-input custom-textarea" name="פירוט ציונים">{{ form_data['פירוט ציונים'] }}</textarea>
+                <br />
+                <label>מגמה 1:</label>
+                <input class="styled-input" name="מגמה 1" type="text" pattern="[A-Za-zא-ת ]+"
+                       onblur="trimInput(this)" placeholder="מגמה 1" value="{{ form_data['מגמה 1'] }}" oninput="validateInput(this)" >
+                <label>מגמה 2:</label>
+                <input class="styled-input" name="מגמה 2" type="text" pattern="[A-Za-zא-ת ]+"
+                       onblur="trimInput(this)" placeholder="מגמה 2" value="{{ form_data['מגמה 2'] }}" oninput="validateInput(this)" >
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

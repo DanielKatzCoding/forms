@@ -129,8 +129,9 @@ footer {
 }
 
 .custom-textarea {
+
     height: 300px; /* Adjust the height as needed */
-    width: 600px;
+    width: 700px;
     padding: 10px;
     resize: none; important!
 }

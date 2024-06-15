@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">תכונות הלוחם - מראיין 1</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <h2>0 - לא ניתן להעריך</h2>
+                <label>זיקה טכנולוגית</label>
+                <div class="slider-container">
+                    <input class="styled-input" name="זיקה טכנולוגית" type="range" min="0" max="6" step="1"
+                           value="{{ form_data['זיקה טכנולוגית'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(0, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>תכנון וביצוע</label>
+                <p>יכולת לתכנון ופריטת צעדים, הבנת השיקלולים לפעולה</p>
+                <p>ו/או התנהגות תוך הפעלת שיקול דעת ויכולת שיפוט, תעדוף, יסודיות וירידה לפרטים.</p>
+
+                <div class="slider-container">
+                    <input class="styled-input" name="תכנון וביצוע" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['תכנון וביצוע'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>עצמאות</label>
+                <p>יכולת לעבוד ללא צורך בהנחיה ובקרה אדוקה, תוך הפעלת שיקול דעת מותאם בפתרון בעיות.</p>
+
+                <div class="slider-container">
+                    <input class="styled-input" name="עצמאות" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['עצמאות'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>יצירתיות</label>
+                <p>חשיבה חדשנית, אסוציאטיבית, מחוץ לקופסא. מציאת פתרונות חדשים.</p>
+
+                <div class="slider-container">
+                    <input class="styled-input" name="יצירתיות" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['יצירתיות'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label>סקרנות</label>
+                <p>הבעת עניין מעברים לתכנים המועברים באופן פורמלי.</p>
+
+                <div class="slider-container">
+                    <input class="styled-input" name="סקרנות" type="range" min="1" max="6" step="1"
+                           value="{{ form_data['סקרנות'] }}">
+                    <div class="slider-labels">
+                        {% for i in range(1, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

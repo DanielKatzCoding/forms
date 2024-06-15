@@ -8,14 +8,12 @@
 {% block content1 %}
     <form id="form_id" action="/submit" method="post">
             <div class="selection_form">
-                <label>תאריך</label>
-                <input class="styled-input" name="תאריך" type="date" placeholder="dd-mm-yyyy" value="{{ form_data['תאריך'] }}">
-                <label>שם המועמד:</label>
-                <input class="styled-input" name="שם המועמד" type="text" pattern="[A-Za-zא-ת]+" placeholder="שם המועמד"
-                       value="{{ form_data['שם המועמד'] }}" oninput="validateInput(this)" >
-                <label>שם המעריך:</label>
-                <input class="styled-input" name="שם המעריך" type="text" pattern="[A-Za-zא-ת]+" placeholder="שם המעריך"
-                       value="{{ form_data['שם המעריך'] }}" oninput="validateInput(this)">
+                <label>שם המלשב:</label>
+                <input class="styled-input" name="שם המלשב" type="text" pattern="[A-Za-zא-ת ]+"
+                       onblur="trimInput(this)" placeholder="שם המלשב" value="{{ form_data['שם המלשב'] }}" oninput="validateInput(this)" >
+                <label>תעודת זהות:</label>
+                <input class="styled-input" name="תעודת זהות" type="text" pattern="\d{9}"
+                       onblur="trimInput(this)" placeholder="תעודת זהות" value="{{ form_data['תעודת זהות'] }}" oninput="validateID(this)" >
             </div>
             <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
         </form>

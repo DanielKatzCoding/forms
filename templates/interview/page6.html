@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">לימודי ב</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>האם משקיע בלימודים:</label><br />
+                <textarea class="styled-input custom-textarea" name="האם משקיע בלימודים">{{ form_data['האם משקיע בלימודים'] }}</textarea>
+                <br />
+
+                <label>איך אתה לומד:</label><br />
+                <textarea class="styled-input custom-textarea" name="איך אתה לומד">{{ form_data['איך אתה לומד'] }}</textarea>
+                <br />
+
+                <label>בעל זיקה לטכנולוגיה:</label><br />
+                <textarea class="styled-input custom-textarea" name="בעל זיקה לטכנולוגיה">{{ form_data['בעל זיקה לטכנולוגיה'] }}</textarea>
+                <br />
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

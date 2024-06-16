@@ -16,16 +16,14 @@ templates = Jinja2Templates(directory="templates")
 
 def add_routes(directory, prefix):
     templates_path = Path(directory)
-    lst_pages = sorted([t_path for t_path in templates_path.glob("*.html")])
-    dict_pages = {"pages": [f"{prefix}/{page.name.rsplit('.')[0]}" for page in lst_pages]}
+    with open("data/default.json", 'r') as f:
+        count = len(json.load(f)[prefix[1:]]["navs"])
+    lst_pages = [f"page{i}" for i in range(1, count+1)]
+    dict_pages = {"pages": [f"{prefix}/{page}" for page in lst_pages]}
 
     for template_file in lst_pages:
-        route_path = f"{prefix}/{template_file.stem}"
+        route_path = f"{prefix}/{template_file}"
         tmp_data = dict_pages.copy()
-
-        # with open("data/data.json", 'r') as f:
-        #     tmp_data["pages"] = json.load(f)
-        #     tmp_data.update(json.load(f))
 
         with open("data/default.json", 'r') as f:
             tmp_data["navs"] = json.load(f)[prefix.lstrip('/')]["navs"]

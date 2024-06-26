@@ -45,7 +45,6 @@ def export_data(quest):
     # Export to Excel with RTL support
     excel_writer = pd.ExcelWriter(f"{get_desktop_path()}/{quest+postfix}.xlsx", engine='openpyxl')
     df.to_excel(excel_writer, index=False, sheet_name='Sheet1')
-
     # Adjust Excel settings for RTL format
     worksheet = excel_writer.sheets['Sheet1']
     worksheet.sheet_view.rightToLeft = True

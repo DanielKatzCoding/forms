@@ -37,9 +37,10 @@ async def submit(data: FormData):
     update_data(data.__root__)
     if export.lower() == "true":
         exp(dir_)
-        return RedirectResponse(url="/", status_code=303)
-    if draft.lower() == "true":
-        return RedirectResponse(url=page_name, status_code=303)
-    return RedirectResponse(url=f"/{dir_+'/page'+str(int(page[4:])+1)}", status_code=303)
+        path = "/"
+    elif draft.lower() == "true":
+        path = page_name
 
-
+    else:
+        path = f"/{dir_+'/page'+str(int(page[4:])+1)}"
+    return RedirectResponse(url=f"{path}", status_code=303)

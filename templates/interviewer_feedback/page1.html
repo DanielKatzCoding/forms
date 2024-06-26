@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block title1 %}
+    <h1 id="section_id">פרטים אישיים</h1>
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>שם מראיין ממשב:</label>
+                <input class="styled-input" name="שם מראיין ממשב" type="text" pattern="[A-Za-zא-ת ]+"
+                       onblur="trimInput(this)" placeholder="שם מראיין ממשב" value="{{ form_data['שם מראיין ממשב'] }}" oninput="validateInput(this)" >
+                <label>שם מראיין ממושב:</label>
+                <input class="styled-input" name="שם מראיין ממושב" type="text" pattern="[A-Za-zא-ת ]+"
+                       onblur="trimInput(this)" placeholder="שם מראיין ממושב" value="{{ form_data['שם מראיין ממושב'] }}" oninput="validateInput(this)" >
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

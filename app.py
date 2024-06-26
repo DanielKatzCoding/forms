@@ -17,4 +17,4 @@ app.include_router(form_handle_router)
 
 if __name__ == "__main__":
 
-    uvicorn.run(app, host="localhost", port=8080, reload=True)
+    uvicorn.run(app, host="localhost", port=8080)

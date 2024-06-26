@@ -45,6 +45,7 @@ def add_routes(directory, prefix):
 # Add routes for all templates in the "dynamics" directory
 add_routes("templates/dynamics", "/dynamics")
 add_routes("templates/interview", "/interview")
+add_routes("templates/interviewer_feedback", "/interviewer_feedback")
 
 
 @router.get("/", response_class=HTMLResponse)

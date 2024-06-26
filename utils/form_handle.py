@@ -31,13 +31,15 @@ def update_data(data: Dict[str, Union[Dict[str, str], str]]):
 async def submit(data: FormData):
     # Process the form data here
     export = data.__root__.pop("export_")
+    draft = data.__root__.pop("draft_")
     page_name = next(iter(data.__root__.keys()))
     dir_, page = page_name.lstrip('/').split('/')
     update_data(data.__root__)
     if export.lower() == "true":
-        exp()
+        exp(dir_)
         return RedirectResponse(url="/", status_code=303)
-
+    if draft.lower() == "true":
+        return RedirectResponse(url=page_name, status_code=303)
     return RedirectResponse(url=f"/{dir_+'/page'+str(int(page[4:])+1)}", status_code=303)
 
 

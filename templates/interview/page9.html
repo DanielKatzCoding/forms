@@ -14,12 +14,20 @@
                 <textarea class="styled-input custom-textarea" name="מוטיבציה - ציפיות מהשירות">{{ form_data['מוטיבציה - ציפיות מהשירות'] }}</textarea>
                 <br />
 
-                <label>דח"ש:</label>
-                <input class="styled-input" name="דחש" type="text" pattern="[A-Za-zא-ת ]+"
-                       onblur="trimInput(this)" placeholder="כן/לא" value="{{ form_data['דחש'] }}" oninput="validateInput(this)" >
+                <label>דח"ש:</label><br />
+                  <div>
+                    <input class="input-radio" type="radio" id="כן" name="דחש" value="כן" {% if form_data['דחש'] == 'כן' %}checked{% endif %} />
 
+                    <label for="כן">כן</label>
+                  </div>
 
-                <label>פירוט דח"ש:</label><br />
+                  <div>
+                    <input class="input-radio" type="radio" id="לא" name="דחש" value="לא" {% if form_data['דחש'] == 'לא' %}checked{% endif %} />
+                    <label for="לא">לא</label>
+                  </div>
+                <br />
+
+                <label>פירוט דח"ש</label><br />
                 <textarea class="styled-input custom-textarea" name="פירוט דחש">{{ form_data['פירוט דחש'] }}</textarea>
                 <br />
 

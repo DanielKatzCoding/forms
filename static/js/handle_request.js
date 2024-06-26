@@ -1,4 +1,4 @@
-async function submitForm(export_ = false) {
+async function submitForm(export_ = false, draft_ = false) {
     const form = document.getElementById('form_id');
 
     const formData = new FormData(form);
@@ -14,6 +14,8 @@ async function submitForm(export_ = false) {
     const path = window.location.pathname;
     wrapper[path] = data;
     wrapper["export_"] = export_;
+    wrapper["draft_"] = draft_;
+
 
     try {
         const response = await fetch('/submit', {

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">התאמה - מראיין 1</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+        <div class="selection_form">
+            <label>התאמה - מראיין 1:</label><br />
+              <div>
+                <input class="input-radio" type="radio" id="מתאים" name="התאמה1" value="מתאים" {% if form_data['התאמה1'] == 'מתאים' %}checked{% endif %} />
+
+                <label for="מתאים">מתאים</label>
+              </div>
+
+              <div>
+                <input class="input-radio" type="radio" id="לבב" name="התאמה1" value="לבב" {% if form_data['התאמה1'] == 'לבב' %}checked{% endif %} />
+                <label for="לבב">לב"ב</label>
+              </div>
+            <br />
+
+            <label>ציון התאמה1</label>
+            <div class="slider-container">
+                <input class="styled-input" name="ציון התאמה1" type="range" min="1" max="6" step="1"
+                       value="{{ form_data['ציון התאמה1'] }}">
+                <div class="slider-labels">
+                    {% for i in range(1, 7) %}
+                        <span>{{ i }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+    </form>
+{% endblock %}

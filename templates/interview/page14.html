@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title1 %}
+    <h1 id="section_id">תכונות הלוחם - מראיין 2</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+        <h2>0 - לא ניתן להעריך</h2>
+            <div class="selection_form">
+                {% for f in ['חוסן2', 'מוטיבציה לשירות ביחידה2', 'יכולות למידה גבוהות2', 'עבודת צוות2', 'אחריות אישית2', 'גמישות תפקודית2', 'זיקה טכנולוגית2', 'תכנון וביצוע2', 'עצמאות2', 'יצירתיות2', 'סקרנות2', 'אמינות2', 'פרו-אקטיביות2'] %}
+                <label>{{ f.strip('2') }}</label>
+                <div class="slider-container">
+                    <input class="styled-input" name="{{ f }}" type="range" min="0" max="6" step="1"
+                           value="{{ form_data[f] }}">
+                    <div class="slider-labels">
+                        {% for i in range(0, 7) %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <button type="button" class="btn" onclick="submitForm()">שמירה והמשך</button>
+        </form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+
+{% block title1 %}
+    <h1 id="section_id">משוב</h1>
+
+{% endblock %}
+
+{% block content1 %}
+    <form id="form_id" action="/submit" method="post">
+            <div class="selection_form">
+                <label>איך התנהל בדינאמיקה הקבוצתית ומה העביר:</label><br />
+                <textarea class="styled-input custom-textarea" name="איך התנהל בדינאמיקה הקבוצתית ומה העביר">{{ form_data['איך התנהל בדינאמיקה הקבוצתית ומה העביר'] }}</textarea>
+                <br />
+
+                <label>איך התנהל בראיון:</label><br />
+                <textarea class="styled-input custom-textarea" name="מה איך התנהל בראיון">{{ form_data['איך התנהל בראיון'] }}</textarea>
+                <br />
+
+                <label>נקודות לשיפור:</label><br />
+                <textarea class="styled-input custom-textarea" name="נקודות לשיפור">{{ form_data['נקודות לשיפור'] }}</textarea>
+                <br />
+
+                <label>נקודות לשימור:</label><br />
+                <textarea class="styled-input custom-textarea" name="נקודות לשימור">{{ form_data['נקודות לשימור'] }}</textarea>
+                <br />
+            </div>
+            <button type="button" class="btn" onclick="submitForm(false, true)">שמירה והישאר</button>
+            <button type="button" class="btn" onclick="submitForm(true)">שמירה וסיום</button>
+        </form>
+{% endblock %}

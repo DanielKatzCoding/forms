@@ -2,10 +2,12 @@
 
 body {
     font-family: 'default_font', Arial;
-    background-color: #2b2b2b;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 20px;
-    color: #dedede;
+    display: flex;
+    font-size: 20px;
 }
 
 a {
@@ -20,7 +22,8 @@ ul {
 }
 
 ul li {
-    background-color: #292828;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     padding: 0;
     margin: 10px 10px; /* Adjust margin as needed */
@@ -44,10 +47,6 @@ ul li a:hover {
     font-size: 25px;
 }
 
-ul li a :hover {
-    font-size: 25px;
-}
-
 .container {
     display: flex;
     justify-content: flex-start;
@@ -59,7 +58,8 @@ ul li a :hover {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #212121;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
     width: 15%; /* Adjust width as needed */
     height: 100%; /* Full height of viewport */
     overflow-y: auto; /* Enable scrolling if content exceeds height */
@@ -96,7 +96,8 @@ footer {
 }
 
 .selection_form {
-    background-color: #3a3a3a;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
     padding: 10px;
     margin: 0;
     border-radius: 10px;
@@ -119,10 +120,10 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 15px 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     outline: none;
-    color: black;
+    color: white;
     transition: box-shadow 0.5s ease, background-color 0.5s ease;
     margin-bottom: 20px; /* Add spacing between inputs */
     font-size: 20px;
@@ -146,7 +147,7 @@ textarea {
 
 .styled-input:focus {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, .6);
 }
 
 .styled-input:focus::placeholder {

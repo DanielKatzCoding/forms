@@ -1,12 +1,14 @@
 import json
 from pathlib import Path
-
-from fastapi import APIRouter, Request
+import os
+from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
+
 from utils.form_handle import get_form_data
 from utils.finalizing import reset_database
+from functools import lru_cache
 
 router = APIRouter()
 
@@ -14,6 +16,7 @@ router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
 
+@lru_cache(maxsize=1)
 def add_routes(directory, prefix):
     templates_path = Path(directory)
     with open("data/default.json", 'r') as f:

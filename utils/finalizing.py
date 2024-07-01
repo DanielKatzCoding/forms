@@ -38,10 +38,10 @@ def export_data(quest):
     rows = build_obj()
     df = pd.DataFrame(rows)
     postfix = "-"
-    if rows.get("שם המועמד"):
-        postfix += rows.get("שם המועמד")[0]
-    elif rows.get("תעודת זהות"):
+    if rows.get("תעודת זהות"):
         postfix += rows.get("תעודת זהות")[0]
+    else:
+        postfix += rows.get("שם מראיין ממשב")[0] + '-' + rows.get("שם מראיין ממושב")[0]
     # Export to Excel with RTL support
     excel_writer = pd.ExcelWriter(f"{get_desktop_path()}/{quest+postfix}.xlsx", engine='openpyxl')
     df.to_excel(excel_writer, index=False, sheet_name='Sheet1')

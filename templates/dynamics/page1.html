@@ -15,6 +15,10 @@
                 <input class="styled-input" name="שם המועמד" type="text" pattern="[A-Za-zא-ת ]+"
                        onblur="trimInput(this)" placeholder="שם המועמד" value="{{ form_data['שם המועמד'] }}" oninput="validateInput(this)" >
 
+                <label>תעודת זהות של מועמד:</label>
+                <input class="styled-input" name="תעודת זהות" type="text" pattern="\d{9}"
+                       onblur="trimInput(this)" placeholder="תעודת זהות" value="{{ form_data['תעודת זהות'] }}" oninput="validateID(this)" >
+
                 <label>שם המעריך:</label>
                 <input class="styled-input" name="שם המעריך" type="text" pattern="[A-Za-zא-ת ]+"
                        onblur="trimInput(this)" placeholder="שם המעריך" value="{{ form_data['שם המעריך'] }}" oninput="validateInput(this)">
